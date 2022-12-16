@@ -1,0 +1,81 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@Gyanu-kumari 
+Gyanu-kumari
+/
+Movies_AppWithoutTye
+Private
+forked from JhansiSai/Movies_AppWithoutTye
+Code
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Movies_AppWithoutTye/Controllers/HomeController.cs /
+@JhansiSai
+JhansiSai first commit
+Latest commit 04f3570 on Mar 5
+ History
+ 1 contributor
+37 lines (32 sloc)  919 Bytes
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using SimpleApp.Models;
+
+namespace SimpleApp.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Movies_AppWithoutTye/HomeController.cs at master · Gyanu-kumari/Movies_AppWithoutTye
